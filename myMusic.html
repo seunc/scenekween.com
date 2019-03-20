@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>sally's music</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="/script.js" defer></script>
+
+
+<!--STYLESHEET-->
+<!--STYLESHEET-->
+<!--STYLESHEET-->
+
+
+<style>
+#musicPage{
+  position: absolute;
+  top:0px;
+  left:0px;
+  width:101%;
+}
+
+#backButton{
+  position: absolute;
+  top:593px;
+  right:624px;
+  width:4.5%;
+  z-index:1;
+  cursor: pointer;
+}
+
+#forwardButton{
+  position: absolute;
+  top:547px;
+  right:493px;
+  width:4%;
+  z-index:1;
+  cursor: pointer;
+}
+
+#playButton{
+  position: absolute;
+  top:558px;
+  right:542px;
+  width:6.4%;
+  z-index:1;
+  cursor: pointer;
+}
+
+</style>
+
+
+  </head>  
+  
+<!------ HTML ------>
+<!------ HTML ------>
+<!------ HTML ------>
+<!------ HTML ------>  
+  <body>
+    <!--music page-->
+    <div>
+      <img id="musicPage" src="music-images/disco_musicPage.png">
+      <a href= ""> <img src="music-images/back.png" id="backButton" onmouseover="hoverBack()" onmouseout="hoveroffBack()"></a>
+      <a href= ""> <img src="music-images/forward.png" id="forwardButton" onmouseover="hoverForward()" onmouseout="hoveroffForward()"></a>
+      <a href= ""> <img src="music-images/play.png" id="playButton" onmouseover="hoverPlay()" onmouseout="hoveroffPlay()"></a>
+
+ 
+    </div>
+
+<!------ JAVASCRIPT ------>
+<!------ JAVASCRIPT ------>
+<!------ JAVASCRIPT ------>
+<!------ JAVASCRIPT ------>
+<script>
+//-----BACK BUTTON hover
+function hoverBack() {
+  var back= document.getElementById('backButton');
+  back.src='music-images/backHover.png'             
+}
+
+function hoveroffBack() {
+  var back= document.getElementById('backButton');
+  back.src='music-images/back.png'             
+}
+
+
+//-----FORWARD BUTTON hover
+function hoverForward() {
+  var forward= document.getElementById('forwardButton');
+  forward.src='music-images/forwardHover.png'             
+}
+
+function hoveroffForward() {
+  var forward= document.getElementById('forwardButton');
+  forward.src='music-images/forward.png'             
+}
+
+
+//-----PLAY BUTTON hover
+function hoverPlay() {
+  var play= document.getElementById('playButton');
+  play.src='music-images/playHover.png'             
+}
+
+function hoveroffPlay() {
+  var play= document.getElementById('playButton');
+  play.src='music-images/play.png'             
+}
+
+</script>
+  </body>
+  
+  
+</html>

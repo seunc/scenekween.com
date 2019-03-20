@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>sally choi</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--STYLESHEET-->
+<!--STYLESHEET-->
+<!--STYLESHEET-->
+<style>
+body {
+  cursor: url("http://gdurl.com/cjeb"), auto; 
+  overflow:hidden;
+  /* face cursor: url("http://gdurl.com/Gs5W"), auto; */
+  /* pizza cursor  cursor: url("http://gdurl.com/Nlaf"), auto;*/
+}
+
+/* ------------LOADING screen------------ */
+#loadingBG {
+  position: absolute;
+  top: 0px;
+  left: -5px;
+  width: 100.5%;
+  z-index: 19;
+  animation: loading 9s;
+  animation-fill-mode: forwards;
+
+}
+#loadingLeftPanel {
+  position: absolute;
+  top: 0px;
+  left: -5px;
+  width: 100.5%;
+  z-index: 21;
+  animation: leftPanel 9s;
+  animation-fill-mode: forwards;
+}
+#loaderBar {
+  position: absolute;
+  top: 0px;
+  left: -916px;;
+  width: 100.5%;
+  z-index: 20;
+  animation: bar 8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bar{
+  40% {
+    position: absolute;
+    top: 0px;
+    left: -916px;
+    opacity:1;
+  }
+  99% {
+    position: absolute;
+    top: 0px;
+    left: -5px;
+    opacity:1;
+  }
+  100% {
+    position: absolute;
+    top: 0px;
+    left: -5px;
+    opacity:0;
+  }
+}
+@keyframes leftPanel {
+  0%{opacity:1;}
+  90%{opacity:1;}
+  100%{opacity: 0;} 
+}
+@keyframes loading {
+  0%{opacity:1;}
+  90%{opacity:1;}
+  100%{opacity: 0;} 
+}
+
+
+
+/* ------------LANDING PAGE------------ */
+
+#landing{
+  animation: landingPage 9s;
+  animation-fill-mode: forwards;
+}
+@keyframes landingPage{
+  0%{opacity:0;}
+  90%{opacity:0;}
+  100%{opacity:1;}
+}
+
+#landingFinal{
+  position: absolute;
+  top:-69px;
+  left:-40px;
+  opacity:1;
+  width:104%;
+}
+
+/*-- GRAPHIC LINKS --*/
+
+#phoneGraphic {
+  position: absolute; 
+  right: 186px;
+  top: 226px;
+  width: 32.5%;
+  z-index:10;
+  cursor: pointer;
+  }
+  
+
+#lipstickGraphic {
+  position: absolute;
+  left: 510px;
+  top: 445px;
+  width: 4.4%;
+  z-index:9;
+  cursor: pointer;
+}
+
+
+#polaroidGraphic{
+  position: absolute;
+  right: 335.5px;
+  top: 55px;
+  width: 8.9%;
+  z-index:8;
+  cursor: pointer;
+}
+
+#radioGraphic{
+  position: absolute;
+  left: -38.6px;
+  top: 352px;
+  width: 29%;
+  z-index:8;
+  cursor: pointer;
+}
+
+</style>
+
+  </head>  
+  
+  
+<!------ HTML ------>
+<!------ HTML ------>
+<!------ HTML ------>
+<!------ HTML ------>
+
+
+  <body>
+<!-- ------loading screen ONE------ -->
+    <div id="loadScreen">
+        <img id="loadingBG" src="http://gdurl.com/34SI">
+        <img id="loadingLeftPanel" src="http://gdurl.com/tc-r">
+        <img id="loaderBar" src="http://gdurl.com/Wt7S">
+    </div>
+    
+<!-- ------ landing page background image------ -->
+    <div id="landing">
+      <img id="landingFinal" src="http://gdurl.com/CeWq">
+
+
+<!-- ------ photo links------ -->
+      <a href= "" target="_blank"> <img id="lipstickGraphic" src="http://gdurl.com/UOFS" onmouseover="hoverLipstick()" onmouseout="hoveroffLipstick()" > </a>
+      <a href= "https://www.instagram.com/kiwisupreez/" target="_blank"> <img id="polaroidGraphic" src="http://gdurl.com/LEIP" onmouseover="hoverPolaroid()" onmouseout="hoveroffPolaroid()" title="instagram"></a>   
+
+
+<!-- ------ link to music page ------ -->                                                                                                
+      <a href= "myMusic.html" target="_blank"> <img id="radioGraphic" src="http://gdurl.com/4MmY" onmouseover="hoverRadio()" onmouseout="hoveroffRadio()" title="music"></a>                                                                                                                  
+    
+    
+<!-- ------ link to portfolio page ------ -->  
+      <a href= "myPortfolio.html" target="_blank"> <img id="phoneGraphic" src="http://gdurl.com/uOn1" onmouseover="hoverPhone()" onmouseout="hoveroffPhone()" title="portfolio"></a> 
+    
+   </div>
+
+<!------ JAVASCRIPT ------>
+<!------ JAVASCRIPT ------>
+<!------ JAVASCRIPT ------>
+
+
+<script>
+//-------LOADING SCREEN-------
+window.addEventListener('load',function() {
+  var loadScreen= document.getElementById('loadScreen');
+  setInterval(function(){document.body.removeChild(loadScreen); }, 9000);
+});
+
+
+
+//-------hover-------
+function hoverPhone() {
+  var phoneGraphic= document.getElementById('phoneGraphic');
+  phoneGraphic.src='http://gdurl.com/4nIl'             
+}
+
+function hoveroffPhone() {
+  var phoneGraphic= document.getElementById('phoneGraphic');
+  phoneGraphic.src='http://gdurl.com/uOn1'
+}
+
+//-------LIPSTICK hover-------
+function hoverLipstick() {
+  var lipstickGraphic= document.getElementById('lipstickGraphic');
+  lipstickGraphic.src='http://gdurl.com/rxJO'             
+}
+
+function hoveroffLipstick() {
+  var lipstickGraphic= document.getElementById('lipstickGraphic');
+  lipstickGraphic.src='http://gdurl.com/UOFS'
+}
+
+//-------POLAROID hover-------
+function hoverPolaroid() {
+  var polaroidGraphic= document.getElementById('polaroidGraphic');
+  polaroidGraphic.src='http://gdurl.com/2RqZ'             
+}
+
+function hoveroffPolaroid() {
+  var polaroidGraphic= document.getElementById('polaroidGraphic');
+  polaroidGraphic.src='http://gdurl.com/LEIP'
+}
+
+//-------RADIO hover-------
+function hoverRadio() {
+  var radioGraphic= document.getElementById('radioGraphic');
+  radioGraphic.src='http://gdurl.com/4hi5'             
+}
+
+function hoveroffRadio() {
+  var radioGraphic= document.getElementById('radioGraphic');
+  radioGraphic.src='http://gdurl.com/4MmY'
+}
+</script>
+
+  </body>
+</html>
