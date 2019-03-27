@@ -15,6 +15,10 @@
 
 
 <style>
+
+
+/* ------------MUSIC PAGE BG------------ */
+
 #musicPage{
   position: absolute;
   top:0px;
@@ -22,6 +26,8 @@
   width:101%;
 }
 
+
+/* ------------BUTTONS------------ */
 #backButton{
   position: absolute;
   top:593px;
@@ -59,21 +65,27 @@
 <!------ HTML ------>
 <!------ HTML ------>  
   <body>
-    <!--music page-->
+
+
+<!------------MUSIC PAGE BG------------>
     <div>
       <img id="musicPage" src="music-images/disco_musicPage.png">
-      <a href= ""> <img src="music-images/back.png" id="backButton" onmouseover="hoverBack()" onmouseout="hoveroffBack()"></a>
-      <a href= ""> <img src="music-images/forward.png" id="forwardButton" onmouseover="hoverForward()" onmouseout="hoveroffForward()"></a>
-      <a href= ""> <img src="music-images/play.png" id="playButton" onmouseover="hoverPlay()" onmouseout="hoveroffPlay()"></a>
-
- 
+      <img src="music-images/back.png" id="backButton" onmouseover="hoverBack()" onmouseout="hoveroffBack()">
+      <img src="music-images/forward.png" id="forwardButton" onmouseover="hoverForward()" onmouseout="hoveroffForward()">
+      <img src="music-images/play.png" id="playButton" onmouseover="hoverPlay()" onmouseout="hoveroffPlay()" onclick="togglePlay()">
     </div>
+
+<audio id="myAudio" src="mymusic/Devliwi.m4a" ></audio>
+
+
+
 
 <!------ JAVASCRIPT ------>
 <!------ JAVASCRIPT ------>
 <!------ JAVASCRIPT ------>
 <!------ JAVASCRIPT ------>
 <script>
+
 //-----BACK BUTTON hover
 function hoverBack() {
   var back= document.getElementById('backButton');
@@ -108,6 +120,27 @@ function hoveroffPlay() {
   var play= document.getElementById('playButton');
   play.src='music-images/play.png'             
 }
+
+
+//-----PLAY music
+var myAudio = document.getElementById("myAudio");
+var isPlaying = false;
+
+function togglePlay() {
+  if (isPlaying) {
+    myAudio.pause()
+  } else {
+    myAudio.play();
+  }
+};
+myAudio.onplaying = function() {
+  isPlaying = true;
+};
+myAudio.onpause = function() {
+  isPlaying = false;
+};
+
+
 
 </script>
   </body>
